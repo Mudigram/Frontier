@@ -1,0 +1,1180 @@
+{
+  "inspectTimestamp": "2026-10-01T19:08:44.257Z",
+  "mintAddress": "AzWdwQ7t4YtLNBBv5UPCkMe9D4N8RCp2rqutrgXMRJZ2",
+  "token": {
+    "mint": {
+      "value": "AzWdwQ7t4YtLNBBv5UPCkMe9D4N8RCp2rqutrgXMRJZ2",
+      "source": "On-chain account address",
+      "confidence": "confirmed"
+    },
+    "tokenProgram": {
+      "value": "Token-2022 (TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb)",
+      "source": "Mint account owner check",
+      "confidence": "confirmed"
+    },
+    "isToken2022": true,
+    "decimals": {
+      "value": 6,
+      "source": "Mint account layout",
+      "confidence": "confirmed"
+    },
+    "supply": {
+      "value": "1000000000000000",
+      "source": "Mint account layout",
+      "confidence": "confirmed"
+    },
+    "supplyFormatted": "1,000,000,000",
+    "mintAuthority": {
+      "value": null,
+      "source": "Mint account layout",
+      "confidence": "confirmed"
+    },
+    "freezeAuthority": {
+      "value": null,
+      "source": "Mint account layout",
+      "confidence": "confirmed"
+    },
+    "extensions": {
+      "value": [
+        "MetadataPointer",
+        "TransferHook",
+        "TokenMetadata"
+      ],
+      "source": "Token-2022 TLV extension descriptors",
+      "confidence": "confirmed"
+    },
+    "transferHookProgram": {
+      "value": "4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n",
+      "source": "Token-2022 TransferHook extension",
+      "confidence": "confirmed"
+    },
+    "transferHookAuthority": {
+      "value": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+      "source": "Token-2022 TransferHook extension",
+      "confidence": "confirmed"
+    },
+    "metadata": {
+      "value": {
+        "name": "Smoking Chicken Fish",
+        "symbol": "SCF",
+        "uri": "https://gateway.irys.xyz/9Tq8rNuyKvNYc2TqDeFKZhewTwoX4kgMc46PfiMJa9vY",
+        "additionalMetadata": {},
+        "image": "https://gateway.irys.xyz/334KhSv1kn2XsTt1wnTYx618adtSTs1UWC3vLpsYKm59"
+      },
+      "source": "Token-2022 on-chain metadata extension",
+      "confidence": "confirmed"
+    }
+  },
+  "hook": {
+    "status": "inspected",
+    "hookProgramId": {
+      "value": "4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n",
+      "source": "Token-2022 TransferHook extension",
+      "confidence": "confirmed"
+    },
+    "extraAccountMetaListAddress": {
+      "value": "GsUhzJtQ6KTHvskxBb9uGAda6fnH3bFHv7YKCRemGoeS",
+      "source": "PDA derived via [b\"extra-account-metas\", mint] under hook program",
+      "confidence": "confirmed"
+    },
+    "accountsPassedIntoHook": [
+      {
+        "pubkey": "GsUhzJtQ6KTHvskxBb9uGAda6fnH3bFHv7YKCRemGoeS",
+        "role": "readonly",
+        "isSigner": false,
+        "type": "pda_derived",
+        "pdaSeeds": [
+          "\"extra-account-metas\"",
+          "mint:AzWdwQ7t4YtLNBBv5UPCkMe9D4N8RCp2rqutrgXMRJZ2",
+          "bump:254"
+        ],
+        "owner": "4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n",
+        "dataSize": 51,
+        "lamports": 909320,
+        "dataPreviewHex": "692565c54bfb661a2700000001000000010106636f6e66696703010000000000",
+        "status": "active"
+      },
+      {
+        "pubkey": "1113diW7qC9tyoNVGekn22ZoR65iM47WZQ5KCe1PdH",
+        "role": "readonly",
+        "isSigner": false,
+        "type": "static",
+        "status": "active"
+      }
+    ],
+    "configAccounts": [
+      {
+        "pubkey": "GsUhzJtQ6KTHvskxBb9uGAda6fnH3bFHv7YKCRemGoeS",
+        "role": "readonly",
+        "isSigner": false,
+        "type": "pda_derived",
+        "pdaSeeds": [
+          "\"extra-account-metas\"",
+          "mint:AzWdwQ7t4YtLNBBv5UPCkMe9D4N8RCp2rqutrgXMRJZ2",
+          "bump:254"
+        ],
+        "owner": "4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n",
+        "dataSize": 51,
+        "lamports": 909320,
+        "dataPreviewHex": "692565c54bfb661a2700000001000000010106636f6e66696703010000000000",
+        "status": "active"
+      },
+      {
+        "pubkey": "1113diW7qC9tyoNVGekn22ZoR65iM47WZQ5KCe1PdH",
+        "role": "readonly",
+        "isSigner": false,
+        "type": "static",
+        "status": "active"
+      }
+    ],
+    "mutableStateAccounts": [],
+    "isStatePdaDerived": {
+      "value": false,
+      "source": "Evaluated from ExtraAccountMetaList accounts and PDA curve checks",
+      "confidence": "confirmed"
+    },
+    "idlStatus": {
+      "hasPublicIdl": false,
+      "idlAddress": "GpMR8UGydZnEo547QwxDi8Fq5fYtgvcesyvtMe8oVDa2",
+      "reason": "No verified public Anchor IDL found at anchor:idl PDA"
+    }
+  },
+  "meteora": {
+    "pool": {
+      "value": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+      "source": "Meteora DLMM Indexer API",
+      "confidence": "confirmed"
+    },
+    "poolType": {
+      "value": "DynamicBondingCurve",
+      "source": "Meteora DLMM Protocol",
+      "confidence": "confirmed"
+    },
+    "baseMint": {
+      "value": "AzWdwQ7t4YtLNBBv5UPCkMe9D4N8RCp2rqutrgXMRJZ2",
+      "source": "Target mint configuration",
+      "confidence": "confirmed"
+    },
+    "quoteMint": {
+      "value": "So11111111111111111111111111111111111111112",
+      "source": "Meteora pool pairing mint",
+      "confidence": "confirmed"
+    },
+    "quoteSymbol": "SOL",
+    "liquidity": {
+      "value": "N/A",
+      "source": "Meteora pool state TVL",
+      "confidence": "confirmed"
+    },
+    "price": {
+      "value": "N/A",
+      "source": "Meteora pool active bin state",
+      "confidence": "confirmed"
+    },
+    "discoveryConfidence": "confirmed",
+    "selectionReason": "Single matching Meteora DLMM pool found containing target token mint.",
+    "allCandidatePools": [
+      {
+        "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+        "name": "Meteora Dynamic Bonding Curve (DBC)",
+        "poolType": "DynamicBondingCurve",
+        "tokenX": "AzWdwQ7t4YtLNBBv5UPCkMe9D4N8RCp2rqutrgXMRJZ2",
+        "tokenY": "So11111111111111111111111111111111111111112",
+        "tokenYSymbol": "SOL",
+        "reserveX": "613,106,793.334",
+        "reserveY": "68.76 SOL",
+        "isPairWithSol": true
+      }
+    ]
+  },
+  "transactions": {
+    "scannedSignaturesCount": 20,
+    "parsedTransactionsCount": 9,
+    "transactions": [
+      {
+        "signature": "4VUjBuvsaQ8GbaK8sGEsQKhiJhq7VEm9zMxHDppT9yXENj7ua3M16DnL4v4ndDsyRF7VoEXx3CBQQas4tsXf2Y2i",
+        "slot": 452375727,
+        "timestamp": 1790881351,
+        "type": "buy",
+        "tokenAmount": 2276999.7164630005,
+        "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "success": true,
+        "classificationConfidence": "confirmed",
+        "classificationEvidence": "Wallet 3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7 gained +2276999.7164630005 tokens and spent SOL/counterpart (Swap log: true)",
+        "feePayer": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "logs": [
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 179 of 156198 compute units",
+          "Program return: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA pQAAAAAAAAA=",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 37 of 151109 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 229 of 148648 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 14913 of 163049 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 201 of 147986 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4356 of 147785 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [1]",
+          "Program log: Instruction: Swap2WithTransferHook",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 122152 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 7626 of 98543 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 20780 of 111027 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [2]",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 643 of 86981 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 57926 of 143429 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 118 of 85503 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success"
+        ],
+        "holderBalances": [
+          {
+            "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+            "balance": 9919620.566384
+          },
+          {
+            "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "balance": 613106793.33353
+          }
+        ],
+        "err": null
+      },
+      {
+        "signature": "2Mbk2L2kNkfks3mmKC5uk3syQyjTUA7CLHcE3uMpZK9u41iwKGmJUma14hNeSpofLggJNBnK79d74mDHycUSZrm2",
+        "slot": 452375715,
+        "timestamp": 1790881348,
+        "type": "unknown",
+        "tokenAmount": 0,
+        "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "success": false,
+        "classificationConfidence": "unknown",
+        "classificationEvidence": "Transaction failed on-chain ({\"InstructionError\":[6,{\"Custom\":6000}]})",
+        "feePayer": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "logs": [
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 179 of 156142 compute units",
+          "Program return: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA pQAAAAAAAAA=",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 37 of 151053 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 229 of 148592 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 14913 of 162993 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 201 of 147930 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4356 of 147729 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [1]",
+          "Program log: Instruction: Swap2WithTransferHook",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 122097 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98488 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 110972 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54077 of 143373 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "holderBalances": [
+          {
+            "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+            "balance": 7642620.849921
+          },
+          {
+            "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "balance": 615383793.049993
+          }
+        ],
+        "err": {
+          "InstructionError": [
+            6,
+            {
+              "Custom": 6000
+            }
+          ]
+        }
+      },
+      {
+        "signature": "31595uMoJvrUGfZsBwRuscXvc6qFTaUpfXUfDPqfT1mxEETvMF7CrcmqLanUdkH5oa7JHpqWAmTgtdZc5eaE8c2T",
+        "slot": 452375666,
+        "timestamp": 1790881334,
+        "type": "unknown",
+        "tokenAmount": 0,
+        "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "success": false,
+        "classificationConfidence": "unknown",
+        "classificationEvidence": "Transaction failed on-chain ({\"InstructionError\":[6,{\"Custom\":6000}]})",
+        "feePayer": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "logs": [
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 179 of 156161 compute units",
+          "Program return: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA pQAAAAAAAAA=",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 37 of 151072 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 229 of 148611 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 14913 of 163012 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 201 of 147949 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4356 of 147748 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [1]",
+          "Program log: Instruction: Swap2WithTransferHook",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 122114 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98505 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 110989 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54079 of 143392 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "holderBalances": [
+          {
+            "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+            "balance": 7642620.849921
+          },
+          {
+            "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "balance": 615383793.049993
+          }
+        ],
+        "err": {
+          "InstructionError": [
+            6,
+            {
+              "Custom": 6000
+            }
+          ]
+        }
+      },
+      {
+        "signature": "4EL3Jo5szZNAoThCf8ens4F37dyqj1ACJzJxaYW6s2JuJx9et8tBkqcjKG32mSho5DRZZtxGfwDDZKFEBNJbfCM6",
+        "slot": 452375655,
+        "timestamp": 1790881331,
+        "type": "unknown",
+        "tokenAmount": 0,
+        "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "success": false,
+        "classificationConfidence": "unknown",
+        "classificationEvidence": "Transaction failed on-chain ({\"InstructionError\":[6,{\"Custom\":6000}]})",
+        "feePayer": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "logs": [
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 179 of 156229 compute units",
+          "Program return: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA pQAAAAAAAAA=",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 37 of 151140 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 229 of 148679 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 14913 of 163080 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 201 of 148017 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4356 of 147816 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [1]",
+          "Program log: Instruction: Swap2WithTransferHook",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 122184 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98575 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 111059 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54077 of 143460 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "holderBalances": [
+          {
+            "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+            "balance": 7642620.849921
+          },
+          {
+            "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "balance": 615383793.049993
+          }
+        ],
+        "err": {
+          "InstructionError": [
+            6,
+            {
+              "Custom": 6000
+            }
+          ]
+        }
+      },
+      {
+        "signature": "5S6SYVWRYEQQvxSnv1aVnbTFdnFBi1FhXq3yR9xm51PDuKEUiNmRdR6ApaVRAfFMX3VWZJQ6DuYCJMcfupjYR3zk",
+        "slot": 452375646,
+        "timestamp": 1790881329,
+        "type": "unknown",
+        "tokenAmount": 0,
+        "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "success": false,
+        "classificationConfidence": "unknown",
+        "classificationEvidence": "Transaction failed on-chain ({\"InstructionError\":[6,{\"Custom\":6000}]})",
+        "feePayer": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "logs": [
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 179 of 156133 compute units",
+          "Program return: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA pQAAAAAAAAA=",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 37 of 151044 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 229 of 148583 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 14913 of 162984 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 201 of 147921 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4356 of 147720 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [1]",
+          "Program log: Instruction: Swap2WithTransferHook",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 122088 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98479 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 110963 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54077 of 143364 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "holderBalances": [
+          {
+            "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+            "balance": 7642620.849921
+          },
+          {
+            "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "balance": 615383793.049993
+          }
+        ],
+        "err": {
+          "InstructionError": [
+            6,
+            {
+              "Custom": 6000
+            }
+          ]
+        }
+      },
+      {
+        "signature": "5L6KJ7XiPwStMAKsxzwjtpYRWcLkuMWJsDJVhTKNjE1wagZjB2behKRg7FAngvYpMHGdgpcHt9tQFJyW7TCcaQPT",
+        "slot": 452375347,
+        "timestamp": 1790881248,
+        "type": "unknown",
+        "tokenAmount": 0,
+        "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "success": false,
+        "classificationConfidence": "unknown",
+        "classificationEvidence": "Transaction failed on-chain ({\"InstructionError\":[6,{\"Custom\":6000}]})",
+        "feePayer": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "logs": [
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 179 of 156230 compute units",
+          "Program return: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA pQAAAAAAAAA=",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 37 of 151141 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 229 of 148680 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 14913 of 163081 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 201 of 148018 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4356 of 147817 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [1]",
+          "Program log: Instruction: Swap2WithTransferHook",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 122185 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98576 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 111060 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54077 of 143461 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "holderBalances": [
+          {
+            "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+            "balance": 7642620.849921
+          },
+          {
+            "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "balance": 615383793.049993
+          }
+        ],
+        "err": {
+          "InstructionError": [
+            6,
+            {
+              "Custom": 6000
+            }
+          ]
+        }
+      },
+      {
+        "signature": "5oWMntQNTkiYJqkRkUQ7qSiGhb1S2KFMChFDZ2vsDoLkX6ra4s55itp7toitJucCVKYwA3m6FMgSUxGYCxT7P8DB",
+        "slot": 452375338,
+        "timestamp": 1790881246,
+        "type": "unknown",
+        "tokenAmount": 0,
+        "wallet": "8kgYYhrVqij9nQb4XJZ5G3H4xguojzg7SpMgLhTznzPk",
+        "success": true,
+        "classificationConfidence": "unknown",
+        "classificationEvidence": "No balance delta observed for target mint",
+        "feePayer": "8kgYYhrVqij9nQb4XJZ5G3H4xguojzg7SpMgLhTznzPk",
+        "logs": [
+          "Program pFee3tb7qh5z53jRF4PbLwmNd148Q8ypLNZbqsMeinA invoke [1]",
+          "Program log: Instruction: ClaimProtocolFee",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [2]",
+          "Program log: Instruction: ClaimProtocolFee2",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 179811 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program data: u4VCCc2hVA0lLjHYH5I7pK6hn0S4JLVULVGt9UJevrp4VpbgxU72u6xyR1PDMy7XE2V9EzwQ4HZd2RzOJ/tDd6oBJYiR8L6bBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAFOzccIAAAAAA==",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 10671 of 189333 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN success",
+          "Program pFee3tb7qh5z53jRF4PbLwmNd148Q8ypLNZbqsMeinA consumed 22142 of 200000 compute units",
+          "Program pFee3tb7qh5z53jRF4PbLwmNd148Q8ypLNZbqsMeinA success"
+        ],
+        "holderBalances": [
+          {
+            "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "balance": 615383793.049993
+          }
+        ],
+        "err": null
+      },
+      {
+        "signature": "2BgTVZ17jBV2UkZbLj5R25HS5eQfBqpsVaWq6e8busYpiuXFyaSryLiKBsuNCCbidDDotuPXRuU9UQzjrYrZoBjH",
+        "slot": 452374336,
+        "timestamp": 1790880977,
+        "type": "sell",
+        "tokenAmount": 2617062.131303,
+        "wallet": "8pDiCifQMpxPt2jpU8ge469efc2CvkoFXc6yPLJyrhZY",
+        "success": true,
+        "classificationConfidence": "confirmed",
+        "classificationEvidence": "Wallet 8pDiCifQMpxPt2jpU8ge469efc2CvkoFXc6yPLJyrhZY swapped -2617062.131303 tokens for SOL (Swap log: true)",
+        "feePayer": "AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51",
+        "logs": [
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4435 of 346897 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [1]",
+          "Program log: Instruction: SwapTob",
+          "Program log: commission_rate: 0, platform_fee_rate: 0, trim_rate: 0, commission_direction: false, acc_close_flag: false",
+          "Program log: order_id: 1001897560",
+          "Program log: AzWdwQ7t4YtLNBBv5UPCkMe9D4N8RCp2rqutrgXMRJZ2",
+          "Program log: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "Program log: 8pDiCifQMpxPt2jpU8ge469efc2CvkoFXc6yPLJyrhZY",
+          "Program log: 8pDiCifQMpxPt2jpU8ge469efc2CvkoFXc6yPLJyrhZY",
+          "Program log: before_source_balance: 2617062131303, before_destination_balance: 461339, amount_in: 2617062131303, expect_amount_out: 31511100, slippage: 3500",
+          "Program log: Dex::MeteoraDbcSwapWithHook amount_in: 2617062131303, offset: 0",
+          "Program log: 3W8wVyXBbCLjPwnU9TLdiH4GzAnJPu4WU6fvfbuFvJ6E",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [2]",
+          "Program log: Instruction: Swap2WithTransferHook",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [4]",
+          "Program log: Instruction: TransferHook",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 7402 of 265660 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 20556 of 278144 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 255512 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [3]",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 643 of 252173 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 56210 of 306864 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN success",
+          "Program log: SwapEvent { dex: MeteoraDbcSwapWithHook, amount_in: 2617062131303, amount_out: 266560272 }",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [2]",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 5173 of 244571 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program log: Dex::BisonfiWithSig amount_in: 266560272, offset: 19",
+          "Program log: 6b5LxeDVxqCGAhZjjjgieGP71c5GBt2cBwiafCFX6NMU",
+          "Program BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi invoke [2]",
+          "Program log: 4ceeiahz8VjwP7J18wKkByNHBX4CDpWGTrLijC7aSb5i",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 83 of 159777 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 151708 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program data: sZmBAQAAAAAAUwUYFE5BJLGAllnPWv1QXsLfX6+CMu/T4akJjBH4KL8=",
+          "Program BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi consumed 80165 of 230044 compute units",
+          "Program BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi success",
+          "Program log: SwapEvent { dex: BisonFiWithSig, amount_in: 266560272, amount_out: 31534016 }",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [2]",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 5173 of 143195 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program log: Dex::AlphaQ amount_in: 31534016, offset: 29",
+          "Program log: 9xPhpwq6GLUkrDBNfXCbnSP9ARAMMyUQqgkrqaDW6NLV",
+          "Program ALPHAQmeA7bjrVuccPsYPiCvsi428SNwte66Srvs4pHA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 102567 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 138 of 100421 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ALPHAQmeA7bjrVuccPsYPiCvsi428SNwte66Srvs4pHA consumed 29091 of 126480 compute units",
+          "Program ALPHAQmeA7bjrVuccPsYPiCvsi428SNwte66Srvs4pHA success",
+          "Program log: SwapEvent { dex: AlphaQ, amount_in: 31534016, amount_out: 31513036 }",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [2]",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 5173 of 92072 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 83132 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program log: after_source_balance: 0, after_destination_balance: 31974375, source_token_change: 2617062131303, destination_token_change: 31513036",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [2]",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 5173 of 76508 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 272715 of 342462 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 69747 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 69642 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success"
+        ],
+        "holderBalances": [
+          {
+            "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "balance": 605452684.729999
+          }
+        ],
+        "err": null
+      },
+      {
+        "signature": "4ivjTe6JKuZ5dDpRGWCm8qYEEXqguGsNkjuxtFGPo5Xy4ojLj1a11aFQSQqKmUoZ8KgJk3kiFra8qZxdjAEP79dD",
+        "slot": 452374182,
+        "timestamp": 1790880937,
+        "type": "sell",
+        "tokenAmount": 3596634.980077,
+        "wallet": "CAZsKFor4DeiyB1DDq7f9BNBkkgAgS9Q3hnZyKigh68Y",
+        "success": true,
+        "classificationConfidence": "confirmed",
+        "classificationEvidence": "Wallet CAZsKFor4DeiyB1DDq7f9BNBkkgAgS9Q3hnZyKigh68Y swapped -3596634.980077 tokens for SOL (Swap log: true)",
+        "feePayer": "CAZsKFor4DeiyB1DDq7f9BNBkkgAgS9Q3hnZyKigh68Y",
+        "logs": [
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+          "Program ComputeBudget111111111111111111111111111111 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4486 of 517050 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 7456 of 512556 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 7456 of 505092 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [1]",
+          "Program log: Instruction: SwapTob",
+          "Program log: commission_rate: 8500000, platform_fee_rate: 0, trim_rate: 50, commission_direction: false, acc_close_flag: false",
+          "Program log: order_id: 1001052130",
+          "Program log: AzWdwQ7t4YtLNBBv5UPCkMe9D4N8RCp2rqutrgXMRJZ2",
+          "Program log: CASHx9KJUStyftLFWGvEVf59SGeG9sh5FfcnZMVPCASH",
+          "Program log: CAZsKFor4DeiyB1DDq7f9BNBkkgAgS9Q3hnZyKigh68Y",
+          "Program log: J9Ng8EJNzacNKMskMre1Byt4iNiMi6Ep1xc8yz6JTWrp",
+          "Program log: before_source_balance: 3596634980077, before_destination_balance: 2633953, amount_in: 3596634980077, expect_amount_out: 43339542, slippage: 700",
+          "Program log: Dex::MeteoraDbcSwapWithHook amount_in: 3596634980077, offset: 0",
+          "Program log: 3W8wVyXBbCLjPwnU9TLdiH4GzAnJPu4WU6fvfbuFvJ6E",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [2]",
+          "Program log: Instruction: Swap2WithTransferHook",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [4]",
+          "Program log: Instruction: TransferHook",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 7402 of 415833 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 20564 of 428325 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 405677 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN invoke [3]",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 643 of 402330 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN success",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 56242 of 457053 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN success",
+          "Program log: SwapEvent { dex: MeteoraDbcSwapWithHook, amount_in: 3596634980077, amount_out: 369582924 }",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [2]",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 5173 of 394720 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program log: [JIT] quoted: idx=0 protocol=Quantum amount_out=43699308",
+          "Program log: [JIT] quoted: idx=1 protocol=Quantum amount_out=43637356",
+          "Program log: [JIT] selected: Quantum idx=0 amount_in=369582924",
+          "Program log: Dex::Quantum amount_in: 369582924, offset: 19",
+          "Program log: ugobDeUHRY34mq1yK94eYrepgj2KVmUkHiaV8vyUD42",
+          "Program QuaNtZsgYRe5Z9Bk4LZ4cTD9tbkVoyCNf1R2BN9bBDv invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 83 of 304746 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 303315 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program QuaNtZsgYRe5Z9Bk4LZ4cTD9tbkVoyCNf1R2BN9bBDv consumed 31765 of 334933 compute units",
+          "Program QuaNtZsgYRe5Z9Bk4LZ4cTD9tbkVoyCNf1R2BN9bBDv success",
+          "Program log: SwapEvent { dex: DynamicRouteV1, amount_in: 369582924, amount_out: 43699308 }",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [2]",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 5173 of 297339 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program log: Dex::Manifest amount_in: 36270425, offset: 41",
+          "Program log: E1XDrrALLZJuzicaw7xBfQeSsFCWsZ6tY3dthWuB7GiU",
+          "Program MNFSTqtC93rEfYHB6hF82sKdZpUDFWkViLByLd1k1Ms invoke [2]",
+          "Program data: OubyA0txBKnBShoSdLnd1F6qM3Uf66leH3MgBgH3t1R9/n6KoLX20RDTjHHumlw/nHTFBuP8n0fPa2Jr9B0B+efr4H5ttGJMjBn98mdT+TdNEvXBWjsVicgA3vE5S3l0MizOl13WN5Gl22Gq8VadpxI0zAAcEjAS6YMRZ4TvntlY61JfGfqIlsb6evO+2606PWXzaqvJdDGxu+TC0vbg5HymAgNFL11hkyWr2vTC3w0AAAAAAAAAAFSXKQIAAAAAWXEpAgAAAAA3sbIAAAAAADmxsgAAAAAAAQAAAAAAAAAAAAAAAAAAAA==",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 271327 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+          "Program log: Instruction: TransferChecked",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3295 of 269241 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program data: vWGf64gFAY3BShoSdLnd1F6qM3Uf66leH3MgBgH3t1R9/n6KoLX20YwZ/fJnU/k3TRL1wVo7FYnIAN7xOUt5dDIszpdd1jeRjBn98mdT+TdNEvXBWjsVicgA3vE5S3l0MizOl13WN5EAAAAcLfM3BwBVddzSt1IAVJcpAgAAAAA5sbIAAAAAAP////8AAAAAAQEAAAAAAAA=",
+          "Program MNFSTqtC93rEfYHB6hF82sKdZpUDFWkViLByLd1k1Ms consumed 15487 of 280614 compute units",
+          "Program MNFSTqtC93rEfYHB6hF82sKdZpUDFWkViLByLd1k1Ms success",
+          "Program log: SwapEvent { dex: Manifest, amount_in: 36270425, amount_out: 36280148 }",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [2]",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 5173 of 259829 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program log: Dex::AlphaQ amount_in: 7428883, offset: 55",
+          "Program log: 2YR8bXXn4tTnq8nVjvpYnBiQ7ZKjN3G16wxE8ShL3KaB",
+          "Program ALPHAQmeA7bjrVuccPsYPiCvsi428SNwte66Srvs4pHA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 215618 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+          "Program log: Instruction: TransferChecked",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3295 of 213282 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program ALPHAQmeA7bjrVuccPsYPiCvsi428SNwte66Srvs4pHA consumed 35182 of 242218 compute units",
+          "Program ALPHAQmeA7bjrVuccPsYPiCvsi428SNwte66Srvs4pHA success",
+          "Program log: SwapEvent { dex: AlphaQ, amount_in: 7428883, amount_out: 7430856 }",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [2]",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 5173 of 201687 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3534 of 191796 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program log: commission_direction: false, commission_amount: 371543, commission_adjust_amount: 0",
+          "Program log: 8ZjzUhmxDREvwhYfoGYsfsvhLHoKy2BLA5iLCm1GZGVT",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3534 of 185004 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program log: after_source_balance: 0, after_destination_balance: 45973414, source_token_change: 3596634980077, destination_token_change: 43339461",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u invoke [2]",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 5173 of 174925 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u consumed 330041 of 497628 compute units",
+          "Program proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u success"
+        ],
+        "holderBalances": [
+          {
+            "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "balance": 602835622.598696
+          }
+        ],
+        "err": null
+      }
+    ],
+    "classificationSummary": {
+      "buys": 1,
+      "sells": 2,
+      "transfers": 0,
+      "failed": 5,
+      "unknown": 1
+    }
+  },
+  "volume": {
+    "observedVolume": {
+      "tokenBuyVolume": 2276999.7164630005,
+      "tokenSellVolume": 6213697.11138,
+      "tokenTotalVolume": 8490696.827843
+    },
+    "observationWindow": {
+      "earliestTimestamp": 1790880937,
+      "latestTimestamp": 1790881351,
+      "sampleSize": 9
+    },
+    "methodology": "Derived from parsed Solana token balance deltas across observed confirmed transactions on the target mint and Meteora pool.",
+    "limitations": [
+      "Bounded by RPC transaction history depth (scanned recent sample, not all-time genesis).",
+      "Classifications depend on observed SOL/token balance deltas and Swap log statements.",
+      "Observed market volume does NOT necessarily equal Hooked internal Chapter accounting volume (which may only count qualifying buys, apply graduated caps, or measure in SOL/USD)."
+    ],
+    "confidence": "derived"
+  },
+  "chapter": {
+    "currentChapter": {
+      "value": null,
+      "source": "Unverified hook account schema",
+      "confidence": "unknown",
+      "notes": "Cannot be directly decoded without published IDL or Hooked program layout specification."
+    },
+    "currentWalletCapPct": {
+      "value": null,
+      "source": "Unverified hook account schema",
+      "confidence": "unknown",
+      "notes": "Requires chapter state and starting cap configuration."
+    },
+    "startingWalletCapPct": {
+      "value": null,
+      "source": "Unverified hook account schema",
+      "confidence": "unknown",
+      "notes": "Defined in hook configuration or program parameters."
+    },
+    "chapterThreshold": {
+      "value": null,
+      "source": "Unverified hook account schema",
+      "confidence": "unknown"
+    },
+    "nextThreshold": {
+      "value": null,
+      "source": "Unverified hook account schema",
+      "confidence": "unknown"
+    },
+    "cumulativeVolume": {
+      "value": null,
+      "source": "On-chain hook state",
+      "confidence": "unknown",
+      "notes": "Hook internal volume accumulator address not publicly verified."
+    },
+    "source": "unknown",
+    "confidence": "unknown",
+    "assumptions": [
+      "Hooked Chapter progression depends on qualifying cumulative volume thresholds.",
+      "Exact numerical thresholds (e.g. Chapter 1 -> Chapter 2 volume requirements) and starting wallet cap % are defined in hook program bytecode or unverified account data.",
+      "Observed sample window covers recent activity but does not encompass all historical swaps from genesis."
+    ],
+    "findingsNotes": [
+      "No verified public IDL or published ABI schema found for the transfer hook program.",
+      "Hook references 2 total account(s): 2 read-only (configuration candidates) and 0 writable (mutable state candidates).",
+      "Engineering principle enforced: Account byte layouts were not guessed or hard-coded.",
+      "Observed recent trading volume: 8,490,696.828 tokens across 9 scanned transactions."
+    ]
+  },
+  "wallets": {
+    "sampledWallets": [
+      {
+        "wallet": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+        "tokenAccount": "observed_in_tx",
+        "balanceRaw": "602835622598696",
+        "balanceFormatted": 602835622.598696,
+        "percentageOfSupply": 60.2836,
+        "chapterStatus": {
+          "withinLimit": true,
+          "details": "Holder balance observed from confirmed transaction state; Chapter limit unknown without verified layout."
+        }
+      },
+      {
+        "wallet": "3EhKE8DUuN3bR8bZmQpsmEu6UxDNMCYRu3jm72gC5WU7",
+        "tokenAccount": "observed_in_tx",
+        "balanceRaw": "7642620849921",
+        "balanceFormatted": 7642620.849921,
+        "percentageOfSupply": 0.7643,
+        "chapterStatus": {
+          "withinLimit": true,
+          "details": "Holder balance observed from confirmed transaction state; Chapter limit unknown without verified layout."
+        }
+      }
+    ],
+    "sampleCriteria": "Active token holders and transaction participants directly observed from on-chain transaction balance state.",
+    "confidence": "confirmed"
+  },
+  "failedTransactions": {
+    "totalFailedObserved": 5,
+    "rejectedByHookCount": 5,
+    "tokenProgramErrorCount": 0,
+    "otherErrorCount": 0,
+    "details": [
+      {
+        "signature": "2Mbk2L2kNkfks3mmKC5uk3syQyjTUA7CLHcE3uMpZK9u41iwKGmJUma14hNeSpofLggJNBnK79d74mDHycUSZrm2",
+        "slot": 452375715,
+        "timestamp": 1790881348,
+        "category": "rejected_by_hook",
+        "rawError": "{\"InstructionError\":[6,{\"Custom\":6000}]}",
+        "hookProgramCalled": true,
+        "identifiedHookError": "AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+        "logs": [
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98488 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 110972 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54077 of 143373 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "explanation": "Transfer rejected by Hook: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit."
+      },
+      {
+        "signature": "31595uMoJvrUGfZsBwRuscXvc6qFTaUpfXUfDPqfT1mxEETvMF7CrcmqLanUdkH5oa7JHpqWAmTgtdZc5eaE8c2T",
+        "slot": 452375666,
+        "timestamp": 1790881334,
+        "category": "rejected_by_hook",
+        "rawError": "{\"InstructionError\":[6,{\"Custom\":6000}]}",
+        "hookProgramCalled": true,
+        "identifiedHookError": "AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+        "logs": [
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98505 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 110989 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54079 of 143392 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "explanation": "Transfer rejected by Hook: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit."
+      },
+      {
+        "signature": "4EL3Jo5szZNAoThCf8ens4F37dyqj1ACJzJxaYW6s2JuJx9et8tBkqcjKG32mSho5DRZZtxGfwDDZKFEBNJbfCM6",
+        "slot": 452375655,
+        "timestamp": 1790881331,
+        "category": "rejected_by_hook",
+        "rawError": "{\"InstructionError\":[6,{\"Custom\":6000}]}",
+        "hookProgramCalled": true,
+        "identifiedHookError": "AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+        "logs": [
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98575 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 111059 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54077 of 143460 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "explanation": "Transfer rejected by Hook: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit."
+      },
+      {
+        "signature": "5S6SYVWRYEQQvxSnv1aVnbTFdnFBi1FhXq3yR9xm51PDuKEUiNmRdR6ApaVRAfFMX3VWZJQ6DuYCJMcfupjYR3zk",
+        "slot": 452375646,
+        "timestamp": 1790881329,
+        "category": "rejected_by_hook",
+        "rawError": "{\"InstructionError\":[6,{\"Custom\":6000}]}",
+        "hookProgramCalled": true,
+        "identifiedHookError": "AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+        "logs": [
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98479 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 110963 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54077 of 143364 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "explanation": "Transfer rejected by Hook: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit."
+      },
+      {
+        "signature": "5L6KJ7XiPwStMAKsxzwjtpYRWcLkuMWJsDJVhTKNjE1wagZjB2behKRg7FAngvYpMHGdgpcHt9tQFJyW7TCcaQPT",
+        "slot": 452375347,
+        "timestamp": 1790881248,
+        "category": "rejected_by_hook",
+        "rawError": "{\"InstructionError\":[6,{\"Custom\":6000}]}",
+        "hookProgramCalled": true,
+        "identifiedHookError": "AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+        "logs": [
+          "Program log: Instruction: TransferChecked",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n invoke [3]",
+          "Program log: Instruction: TransferHook",
+          "Program log: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit.",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n consumed 9192 of 98576 compute units",
+          "Program 4GsxAQV9NeDh4J9HX4dWRfNFacxiqHKRf6RxGJoLuK8n failed: custom program error: 0x1770",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 21676 of 111060 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1770",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN consumed 54077 of 143461 compute units",
+          "Program dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN failed: custom program error: 0x1770"
+        ],
+        "explanation": "Transfer rejected by Hook: AnchorError thrown in src\\lib.rs:151. Error Code: ExceedsMaxHolding. Error Number: 6000. Error Message: Recipient would exceed the per-wallet max-holding limit."
+      }
+    ],
+    "confidence": "confirmed"
+  },
+  "observability": {
+    "mint": "confirmed",
+    "hook": "confirmed",
+    "pool": "confirmed",
+    "trades": "confirmed",
+    "volume": "derived",
+    "chapter": "unknown",
+    "wallets": "confirmed",
+    "failedTxs": "confirmed"
+  }
+}

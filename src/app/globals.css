@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=JetBrains+Mono:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  @apply bg-frontier-bg text-frontier-text-primary antialiased;
+  font-family: var(--font-body);
+}
+
+@layer components {
+  /* Tactile Neo-Pop Buttons (MOGO & Summer Inspiration) */
+  .btn-pop-yellow {
+    @apply px-5 py-2.5 rounded-full font-black text-xs md:text-sm uppercase tracking-wider bg-frontier-yellow text-frontier-ink border-2 border-frontier-ink shadow-pop hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-pop-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2;
+  }
+
+  .btn-pop-white {
+    @apply px-5 py-2.5 rounded-full font-black text-xs md:text-sm uppercase tracking-wider bg-white text-frontier-ink border-2 border-frontier-ink shadow-pop hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-pop-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2;
+  }
+
+  .btn-pop-coral {
+    @apply px-5 py-2.5 rounded-full font-black text-xs md:text-sm uppercase tracking-wider bg-frontier-coral text-white border-2 border-frontier-ink shadow-pop hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-pop-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2;
+  }
+
+  .card-pop {
+    @apply rounded-3xl bg-white border-3 border-frontier-ink shadow-pop-lg;
+  }
+
+  .sticker-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border-2 border-frontier-ink shadow-pop-sm;
+  }
+}
+
+/* Candy stripe animation for progress meters */
+.candy-stripe {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.28) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0.28) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 28px 28px;
+  animation: moveStripe 1.5s linear infinite;
+}
+
+@keyframes moveStripe {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 28px 0;
+  }
+}
+
+/* Scrollbar styling for the light theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-frontier-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-frontier-yellow/40 text-frontier-ink;
+}
