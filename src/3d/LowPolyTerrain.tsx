@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { TerritoryDiorama } from "./village/TerritoryDiorama";
+import { BoundaryShield } from "./BoundaryShield";
 import type { TerritoryWithState } from "@/world/chapters";
 
 interface LowPolyTerrainProps {
@@ -90,6 +91,9 @@ export const LowPolyTerrain: React.FC<LowPolyTerrainProps> = ({
           />
         </mesh>
       )}
+
+      {/* Boundary Defense Geodesic Forcefield for Active Enforced Chapter */}
+      {isCurrent && <BoundaryShield color={lightColor} />}
     </group>
   );
 };

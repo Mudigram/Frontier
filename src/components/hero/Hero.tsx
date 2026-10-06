@@ -33,46 +33,45 @@ export const Hero: React.FC = () => {
   const currentName = chapter ? getChapterName(chapter.chapter) : "Settlement";
 
   return (
-    <section className="relative w-full pt-6 pb-16 md:pt-10 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
-      {/* 2-Column Left & Right Split Layout (Polyfarm / Summer / Mogo reference) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-center">
+    <section className="relative w-full pt-8 pb-16 md:pt-14 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+      {/* 2-Column Split: Tactical Left + Atmospheric 3D Showcase Right */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
         
-        {/* Left Column: Headlines, Narrative, Progress Card & Action CTAs */}
-        <div className="lg:col-span-7 xl:col-span-7 flex flex-col items-start text-left z-10">
+        {/* Left Column: Headlines, Architecture Identity, Live Progress */}
+        <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left z-10">
           
-          {/* Eyebrow Sticker Badge */}
-          <div className="mb-3 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-frontier-yellow text-frontier-ink border-2 border-frontier-ink shadow-pop-sm rotate-[-1.5deg] hover:rotate-0 transition-transform">
-            <span className="w-2 h-2 rounded-full bg-frontier-coral animate-ping" />
-            <span className="text-xs font-black uppercase tracking-wider font-display">
-              ⚔️ Chapter Wars is Live
+          {/* Subtle Protocol Pill */}
+          <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-mono">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-slate-300 font-semibold tracking-wide">
+              TOKEN-2022 TRANSFER HOOK OBSERVABILITY
             </span>
-            <span className="text-[11px] font-mono bg-frontier-ink text-white px-2 py-0.5 rounded-full font-bold">
-              $FRNT
-            </span>
+            <span className="text-slate-500 font-bold">|</span>
+            <span className="text-frontier-gold font-bold">FRNT</span>
           </div>
 
           {/* Wordmark & Main Headline */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black tracking-tight text-frontier-ink font-display leading-[0.95]">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-white font-display leading-[0.95]">
             FRONTIER
           </h1>
 
-          {/* Saturated Coral Tagline (Replaced Dark Blue) */}
-          <p className="mt-2 text-xl sm:text-2xl lg:text-3xl font-black tracking-wide text-frontier-coral uppercase font-display">
+          {/* Subdued Gold/Amber Tagline */}
+          <p className="mt-2 text-xl sm:text-2xl font-bold tracking-wide text-frontier-gold uppercase font-display">
             The World Expands By Chapter.
           </p>
 
           {/* Supporting Narrative */}
-          <p className="mt-3 text-sm sm:text-base text-slate-700 font-bold max-w-xl leading-relaxed">
-            Every on-chain volume milestone unlocks fresh territory on the 3D archipelago.
-            Back the world, conquer chapters, and claim your share of the visual frontier.
+          <p className="mt-3 text-sm sm:text-base text-slate-400 max-w-lg leading-relaxed">
+            Every qualifying volume milestone unlocks fresh territory on the 3D archipelago.
+            Token-2022 transfer hooks actively govern wallet capacities as civilization ascends.
           </p>
 
-          {/* Primary Neo-Pop Live State Box */}
-          <div className="mt-6 w-full max-w-xl p-5 sm:p-6 rounded-3xl bg-white border-3 border-frontier-ink shadow-pop-lg relative">
+          {/* Primary Command Console Live State Box */}
+          <div className="mt-6 w-full max-w-xl p-5 sm:p-6 rounded-2xl bg-frontier-surface/90 border border-frontier-border backdrop-blur-md shadow-xl">
             {/* Card Header & Confidence */}
             <div className="flex items-center justify-between mb-3">
-              <span className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-frontier-yellow text-frontier-ink border-2 border-frontier-ink shadow-pop-sm">
-                🗺️ ACTIVE TERRITORY
+              <span className="text-xs font-mono tracking-widest text-slate-400 uppercase">
+                ACTIVE DOMAIN
               </span>
               {chapter && (
                 <ConfidenceBadge source={chapter.source.chapter} size="sm" />
@@ -81,35 +80,35 @@ export const Hero: React.FC = () => {
 
             {/* Chapter Title Banner */}
             <div className="flex items-center gap-3 my-1">
-              <span className="text-2xl sm:text-3xl font-black tracking-tight text-frontier-ink font-display">
+              <span className="text-2xl sm:text-3xl font-black tracking-tight text-white font-mono">
                 CHAPTER {display.chapterRoman}
               </span>
-              <span className="text-frontier-coral text-2xl font-black">✦</span>
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-frontier-coral uppercase font-display">
+              <span className="text-slate-600 text-xl font-light">|</span>
+              <span className="text-xl sm:text-2xl font-bold tracking-wider text-frontier-gold uppercase font-mono">
                 {currentName}
               </span>
             </div>
 
-            {/* Progress Percent Callout with Candy Stripe Meter */}
-            <div className="mt-4 pt-4 border-t-2 border-dashed border-slate-200">
-              <div className="flex items-baseline justify-between mb-1.5">
+            {/* Progress Percent Callout with Sleek Bar */}
+            <div className="mt-4 pt-4 border-t border-slate-800">
+              <div className="flex items-baseline justify-between mb-2">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl sm:text-5xl font-black text-frontier-ink font-display tracking-tight">
+                  <span className="text-3xl sm:text-4xl font-black text-amber-400 font-mono tracking-tight">
                     {Math.round(chapter ? chapter.progressPercent : 76)}%
                   </span>
-                  <span className="text-xs uppercase tracking-wider font-black text-slate-500 font-display">
+                  <span className="text-xs uppercase tracking-wider font-mono text-slate-500">
                     COMPLETE
                   </span>
                 </div>
-                <span className="text-xs font-mono font-black text-frontier-coral">
+                <span className="text-xs font-mono text-slate-400">
                   {display.remainingWithSymbol} TO NEXT UNLOCK
                 </span>
               </div>
 
-              {/* Candy-striped progress bar */}
-              <div className="w-full h-4 sm:h-5 rounded-full bg-slate-100 border-2 border-frontier-ink overflow-hidden p-0.5 shadow-inner">
+              {/* Sleek Progress Bar */}
+              <div className="w-full h-3 rounded-full bg-slate-900 border border-slate-800 overflow-hidden p-0.5">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-frontier-yellow via-frontier-tangerine to-frontier-coral candy-stripe transition-all duration-700"
+                  className="h-full rounded-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-300 transition-all duration-700 shadow-[0_0_10px_rgba(245,158,11,0.3)]"
                   style={{
                     width: `${Math.min(
                       100,
@@ -119,53 +118,54 @@ export const Hero: React.FC = () => {
                 />
               </div>
 
-              <div className="w-full flex justify-between items-center text-[11px] font-mono font-black text-slate-500 mt-2 px-0.5">
-                <span>QUALIFYING VOLUME: {display.volumeProgressString}</span>
-                <span>TARGET: {display.nextThresholdFormatted} FRNT</span>
+              <div className="w-full flex justify-between items-center text-[11px] font-mono text-slate-500 mt-2">
+                <span>VOL: {display.volumeProgressString}</span>
+                <span>CEILING: {display.walletCapFormatted}</span>
               </div>
             </div>
           </div>
 
-          {/* Tactile Arcade Action Buttons Group */}
-          <div className="mt-6 flex flex-wrap items-center gap-3.5">
-            <a href="#progress" className="btn-pop-yellow !text-sm !py-3 !px-6">
-              <span>ENTER WAR ROOM</span>
-              <span className="text-base">⚔️</span>
+          {/* Tactical Action Buttons Group */}
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a href="#world-map" className="btn-gold !text-xs !py-2.5 !px-5">
+              <span>EXPLORE 3D ARCHIPELAGO</span>
+              <span>🧭</span>
             </a>
-            <a href="#world-map" className="btn-pop-white !text-sm !py-3 !px-6">
-              <span>EXPLORE 3D MAP</span>
-              <span className="text-base">🧭</span>
+            <a href="#pioneer-pass" className="btn-tactical !text-xs !py-2.5 !px-5">
+              <span>PIONEER TERRITORY PASS</span>
+              <span>🪪</span>
             </a>
-            <a href="#activity" className="btn-pop-coral !text-sm !py-3 !px-5">
-              <span>LIVE TRANSFERS</span>
-              <span className="text-base">⚡</span>
+            <a href="#observatory" className="btn-tactical !text-xs !py-2.5 !px-4">
+              <span>HOOK RADAR</span>
+              <span>⚡</span>
             </a>
           </div>
         </div>
 
-        {/* Right Column: 3D Floating Island Canvas in Framed Neo-Pop Showcase Viewport */}
-        <div className="lg:col-span-5 xl:col-span-5 relative flex items-center justify-center">
-          <div className="relative w-full h-[460px] sm:h-[520px] lg:h-[580px] rounded-3xl bg-gradient-to-b from-[#fef08a]/35 via-[#fed7aa]/25 to-[#faf8f5] border-3 border-frontier-ink shadow-pop-lg overflow-hidden flex items-center justify-center">
+        {/* Right Column: 3D Floating Island Canvas Spotlight */}
+        <div className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-center">
+          <div className="relative w-full h-[460px] sm:h-[520px] lg:h-[560px] rounded-2xl bg-gradient-to-b from-slate-950/80 via-slate-900/60 to-frontier-bg border border-slate-800/80 shadow-2xl overflow-hidden flex items-center justify-center">
             
             {/* 3D Scene Viewport */}
             <HeroScene className="w-full h-full cursor-grab active:cursor-grabbing" />
 
-            {/* Neo-Pop Floating Sticker Badges (Polyfarm / Mogo aesthetic) */}
-            <div className="absolute top-4 left-4 z-20 px-3 py-1.5 rounded-2xl bg-frontier-yellow text-frontier-ink border-2 border-frontier-ink shadow-pop-sm rotate-[-3deg] text-xs font-black uppercase font-display flex items-center gap-1.5 pointer-events-none">
-              <span>💎 $FRNT PROTOCOL</span>
+            {/* Tactical Corner Overlays */}
+            <div className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded bg-slate-900/80 border border-slate-800 text-[11px] font-mono text-slate-300 flex items-center gap-2 pointer-events-none backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-amber-400" />
+              <span>ACTIVE SETTLEMENT BIOME</span>
             </div>
 
-            <div className="absolute top-4 right-4 z-20 px-3 py-1.5 rounded-2xl bg-white text-frontier-ink border-2 border-frontier-ink shadow-pop-sm rotate-[2deg] text-xs font-black uppercase font-display flex items-center gap-1.5 pointer-events-none">
-              <span className="w-2 h-2 rounded-full bg-frontier-mint animate-pulse" />
-              <span>TOKEN-2022</span>
+            <div className="absolute top-4 right-4 z-20 px-2.5 py-1 rounded bg-slate-900/80 border border-slate-800 text-[11px] font-mono text-slate-400 flex items-center gap-1.5 pointer-events-none backdrop-blur-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>HOOK ONLINE</span>
             </div>
 
-            <div className="absolute bottom-4 left-4 z-20 px-3 py-1.5 rounded-2xl bg-frontier-coral text-white border-2 border-frontier-ink shadow-pop-sm rotate-[1.5deg] text-xs font-black uppercase font-display pointer-events-none">
-              <span>🏝️ CHAPTER II • SETTLEMENT</span>
+            <div className="absolute bottom-4 left-4 z-20 px-2.5 py-1 rounded bg-slate-900/80 border border-slate-800 text-[11px] font-mono text-frontier-gold pointer-events-none backdrop-blur-sm">
+              <span>CHAPTER II DIORAMA</span>
             </div>
 
-            <div className="absolute bottom-4 right-4 z-20 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-sm border-2 border-frontier-ink text-[11px] font-mono font-black text-slate-700 shadow-pop-sm hidden sm:flex items-center gap-1.5 pointer-events-none">
-              <span>👆 Drag village</span>
+            <div className="absolute bottom-4 right-4 z-20 px-2.5 py-1 rounded bg-slate-900/80 border border-slate-800 text-[10px] font-mono text-slate-500 pointer-events-none backdrop-blur-sm">
+              <span>Drag to rotate</span>
             </div>
           </div>
         </div>
