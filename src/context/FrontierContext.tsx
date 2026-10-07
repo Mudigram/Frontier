@@ -49,7 +49,7 @@ const solanaProviderInstance = new SolanaFrontierProvider();
 export const FrontierProvider: React.FC<{
   children: React.ReactNode;
   initialMode?: ProviderMode;
-}> = ({ children, initialMode = "simulation" }) => {
+}> = ({ children, initialMode = "observed" }) => {
   const [providerMode, setProviderModeState] = useState<ProviderMode>(initialMode);
 
   const provider: FrontierDataProvider =

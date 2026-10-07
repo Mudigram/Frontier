@@ -96,23 +96,11 @@ export const Header: React.FC = () => {
             <span className="text-xs">⚡</span>
           </a>
 
-          {/* Simulation vs On-Chain Mode Switcher */}
-          <button
-            onClick={() => setProviderMode(isSimulationMode ? "observed" : "simulation")}
-            className={`hidden md:inline-flex text-[11px] font-mono font-semibold px-2.5 py-1.5 rounded-lg border transition-all items-center gap-1.5 cursor-pointer ${
-              isSimulationMode
-                ? "bg-rose-950/80 text-rose-300 border-rose-700/80 hover:bg-rose-900"
-                : "bg-emerald-950/80 text-emerald-300 border-emerald-700/80 hover:bg-emerald-900"
-            }`}
-            title="Switch between Simulation Mode and Real On-Chain Observed Data"
-          >
-            <span
-              className={`w-1.5 h-1.5 rounded-full ${
-                isSimulationMode ? "bg-rose-400 animate-pulse" : "bg-emerald-400"
-              }`}
-            />
-            <span>{isSimulationMode ? "SIM" : "ON-CHAIN"}</span>
-          </button>
+          {/* On-Chain Verified Badge */}
+          <div className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>ON-CHAIN</span>
+          </div>
         </div>
       </div>
     </header>

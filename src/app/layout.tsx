@@ -47,6 +47,14 @@ export const metadata: Metadata = {
       "On-chain observability and 3D visual world for Token-2022 token Frontier ($FRNT). The world expands by Chapter.",
     url: siteUrl,
     siteName: "Frontier Chapter Wars",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 675,
+        alt: "Frontier ($FRNT) Chapter Wars",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -56,6 +64,7 @@ export const metadata: Metadata = {
     description:
       "On-chain observability and 3D visual world for Token-2022 token Frontier ($FRNT). The world expands by Chapter.",
     creator: "@PlayFRNTonSol",
+    images: ["/og-image.jpg"],
   },
   icons: {
     icon: [

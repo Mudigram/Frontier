@@ -12,7 +12,6 @@ import { ChapterHistory } from "@/components/chapter/ChapterHistory";
 import { ActivityFeed } from "@/components/activity/ActivityFeed";
 import { Observatory } from "@/components/observatory/Observatory";
 import { HookExplorer } from "@/components/hooks/HookExplorer";
-import { SimulatorControls } from "@/components/dev/SimulatorControls";
 
 export default function Home() {
   return (
@@ -46,7 +45,6 @@ export default function Home() {
           <HookExplorer />
         </main>
 
-        <SimulatorControls />
         <Footer />
       </div>
     </FrontierProvider>

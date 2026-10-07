@@ -259,26 +259,9 @@ export const SentryGateScene: React.FC<SentryGateSceneProps> = ({
         </span>
       </div>
 
-      {/* Simulation Controls in 3D Viewport */}
-      <div className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2">
-        <div className="flex items-center gap-2">
-          <button
-            onClick={handleTestRejection}
-            className="text-[10px] font-mono font-bold px-3 py-1.5 rounded-lg bg-rose-950/80 hover:bg-rose-900 text-rose-300 border border-rose-700/80 shadow-sm transition-all active:translate-y-[1px] cursor-pointer min-h-[36px] flex items-center"
-          >
-            TEST REJECTION ⚠️
-          </button>
-          <button
-            onClick={handleTestBuy}
-            className="text-[10px] font-mono font-bold px-3 py-1.5 rounded-lg bg-emerald-950/80 hover:bg-emerald-900 text-emerald-300 border border-emerald-700/80 shadow-sm transition-all active:translate-y-[1px] cursor-pointer min-h-[36px] flex items-center"
-          >
-            TEST COURIER 📦
-          </button>
-        </div>
-
-        <div className="pointer-events-none text-[10px] font-mono font-medium text-slate-400 bg-slate-900/90 px-2 py-1 rounded border border-slate-800 shadow-sm backdrop-blur-sm">
-          Interactive Checkpoint • Drag to inspect
-        </div>
+      {/* Interactive 3D Viewport Hint */}
+      <div className="absolute bottom-3 right-3 pointer-events-none text-[10px] font-mono font-medium text-slate-400 bg-slate-900/90 px-2.5 py-1 rounded-lg border border-slate-800 shadow-sm backdrop-blur-sm">
+        Interactive 3D Sentry Checkpoint • Drag to inspect
       </div>
     </div>
   );
