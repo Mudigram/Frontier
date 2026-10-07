@@ -69,7 +69,7 @@ export const WorldMap: React.FC = () => {
             </div>
 
             {/* Quick Territory Selector Pills */}
-            <div className="grid grid-cols-5 gap-2 font-mono text-xs">
+            <div className="flex overflow-x-auto sm:grid sm:grid-cols-5 gap-2 font-mono text-xs pb-1 sm:pb-0 scrollbar-none -mx-1 px-1">
               {territories.map((t) => {
                 const isSelected = selectedTerritory.id === t.id;
                 const isCurrent = t.current;
@@ -78,7 +78,7 @@ export const WorldMap: React.FC = () => {
                   <button
                     key={t.id}
                     onClick={() => setSelectedTerritory(t)}
-                    className={`p-2.5 rounded-lg border text-center transition-all cursor-pointer ${
+                    className={`flex-1 min-w-[76px] sm:min-w-0 min-h-[46px] p-2 sm:p-2.5 rounded-lg border text-center transition-all cursor-pointer flex flex-col items-center justify-center ${
                       isSelected
                         ? "bg-slate-800 border-frontier-gold text-frontier-gold shadow-md"
                         : isCurrent
@@ -88,8 +88,8 @@ export const WorldMap: React.FC = () => {
                         : "bg-slate-950/40 border-slate-900 text-slate-600"
                     }`}
                   >
-                    <div className="font-bold">{t.roman}</div>
-                    <div className="text-[10px] truncate uppercase mt-0.5">{t.name}</div>
+                    <div className="font-bold text-xs sm:text-sm">{t.roman}</div>
+                    <div className="text-[9px] sm:text-[10px] truncate uppercase mt-0.5 max-w-[70px] sm:max-w-none">{t.name}</div>
                   </button>
                 );
               })}

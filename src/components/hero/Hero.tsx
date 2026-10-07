@@ -126,16 +126,16 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Tactical Action Buttons Group */}
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a href="#world-map" className="btn-gold !text-xs !py-2.5 !px-5">
+          <div className="mt-6 flex flex-wrap items-center gap-3 w-full sm:w-auto">
+            <a href="#world-map" className="btn-gold !text-xs !py-3 !px-5 min-h-[44px] flex items-center justify-center gap-2 flex-1 sm:flex-initial">
               <span>EXPLORE 3D ARCHIPELAGO</span>
               <span>🧭</span>
             </a>
-            <a href="#pioneer-pass" className="btn-tactical !text-xs !py-2.5 !px-5">
+            <a href="#pioneer-pass" className="btn-tactical !text-xs !py-3 !px-5 min-h-[44px] flex items-center justify-center gap-2 flex-1 sm:flex-initial">
               <span>PIONEER TERRITORY PASS</span>
               <span>🪪</span>
             </a>
-            <a href="#observatory" className="btn-tactical !text-xs !py-2.5 !px-4">
+            <a href="#observatory" className="btn-tactical !text-xs !py-3 !px-4 min-h-[44px] flex items-center justify-center gap-2 w-full sm:w-auto">
               <span>HOOK RADAR</span>
               <span>⚡</span>
             </a>
@@ -144,7 +144,7 @@ export const Hero: React.FC = () => {
 
         {/* Right Column: 3D Floating Island Canvas Spotlight */}
         <div className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-center">
-          <div className="relative w-full h-[460px] sm:h-[520px] lg:h-[560px] rounded-2xl bg-gradient-to-b from-slate-950/80 via-slate-900/60 to-frontier-bg border border-slate-800/80 shadow-2xl overflow-hidden flex items-center justify-center">
+          <div className="relative w-full h-[360px] sm:h-[460px] lg:h-[560px] rounded-2xl bg-gradient-to-b from-slate-950/80 via-slate-900/60 to-frontier-bg border border-slate-800/80 shadow-2xl overflow-hidden flex items-center justify-center">
             
             {/* 3D Scene Viewport */}
             <HeroScene className="w-full h-full cursor-grab active:cursor-grabbing" />

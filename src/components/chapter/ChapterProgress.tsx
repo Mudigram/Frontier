@@ -51,22 +51,22 @@ export const ChapterProgress: React.FC = () => {
         </div>
 
         {/* The Progression Chain: VOLUME → CHAPTER → WALLET LIMIT → WORLD MAP */}
-        <div className="my-6 p-4 rounded-xl bg-slate-950/80 border border-slate-800/80 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+        <div className="my-6 p-4 rounded-xl bg-slate-950/80 border border-slate-800/80 grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-between gap-3 text-xs font-mono">
           <div className="flex items-center gap-2">
             <span className="w-6 h-6 rounded bg-slate-800 text-slate-300 flex items-center justify-center font-bold">1</span>
             <span className="text-slate-300">VOLUME ACCUMULATION</span>
           </div>
-          <span className="text-slate-600">→</span>
+          <span className="hidden sm:inline-block text-slate-600">→</span>
           <div className="flex items-center gap-2">
             <span className="w-6 h-6 rounded bg-slate-800 text-amber-400 flex items-center justify-center font-bold">2</span>
             <span className="text-slate-300">CHAPTER UNLOCK</span>
           </div>
-          <span className="text-slate-600">→</span>
+          <span className="hidden sm:inline-block text-slate-600">→</span>
           <div className="flex items-center gap-2">
             <span className="w-6 h-6 rounded bg-slate-800 text-emerald-400 flex items-center justify-center font-bold">3</span>
             <span className="text-slate-300">HOOK WALLET LIMIT</span>
           </div>
-          <span className="text-slate-600">→</span>
+          <span className="hidden sm:inline-block text-slate-600">→</span>
           <div className="flex items-center gap-2">
             <span className="w-6 h-6 rounded bg-slate-800 text-sky-400 flex items-center justify-center font-bold">4</span>
             <span className="text-slate-300">3D ARCHIPELAGO</span>

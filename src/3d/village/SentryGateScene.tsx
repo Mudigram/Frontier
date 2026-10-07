@@ -196,35 +196,37 @@ export const SentryGateScene: React.FC<SentryGateSceneProps> = ({
   };
 
   return (
-    <div className="w-full h-full min-h-[360px] sm:min-h-[400px] relative">
+    <div className="w-full h-full min-h-[340px] sm:min-h-[400px] relative touch-pan-y">
       <Canvas
         camera={{ position: [0, 4.2, 5.5], fov: 38 }}
-        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 1.8]}
+        performance={{ min: 0.5 }}
+        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
         shadows
       >
-        <fog attach="fog" args={["#fef3c7", 12, 26]} />
+        <fog attach="fog" args={["#070a12", 12, 26]} />
 
-        {/* Daylight neo-pop lighting */}
-        <hemisphereLight args={["#fff7ed", "#65a30d", 0.9]} />
-        <ambientLight intensity={0.55} color="#fffbeb" />
+        {/* Obsidian atmospheric lighting */}
+        <hemisphereLight args={["#1e293b", "#090d16", 0.75]} />
+        <ambientLight intensity={0.45} color="#cbd5e1" />
         <directionalLight
           position={[6, 12, 6]}
-          intensity={2.2}
-          color="#fff7ed"
+          intensity={2.0}
+          color="#fef08a"
           castShadow
-          shadow-mapSize={[1024, 1024]}
+          shadow-mapSize={[512, 512]}
         />
-        <directionalLight position={[-4, 3, -2]} intensity={0.4} color="#fb923c" />
+        <directionalLight position={[-4, 3, -2]} intensity={0.4} color="#38bdf8" />
 
         <GatekeeperArena latestEvent={latestEvent} triggerState={activeTrigger} />
 
         <ContactShadows
           position={[0, -0.48, 0]}
-          opacity={0.35}
+          opacity={0.45}
           scale={8}
           blur={2.2}
           far={2.5}
-          color="#431407"
+          color="#020617"
         />
 
         <OrbitControls
@@ -241,12 +243,12 @@ export const SentryGateScene: React.FC<SentryGateSceneProps> = ({
       {/* Floating Status Badge */}
       <div className="absolute top-3 left-3 pointer-events-none">
         <span
-          className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-black uppercase tracking-wider border-2 border-frontier-ink shadow-pop-sm ${
+          className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider border backdrop-blur-sm shadow-md ${
             activeTrigger === "rejection" || latestEvent?.type === "hook_rejection"
-              ? "bg-rose-100 text-rose-900"
+              ? "bg-rose-950/80 text-rose-300 border-rose-700/80"
               : activeTrigger === "buy" || latestEvent?.type === "buy"
-              ? "bg-emerald-100 text-emerald-900"
-              : "bg-frontier-yellow text-frontier-ink"
+              ? "bg-emerald-950/80 text-emerald-300 border-emerald-700/80"
+              : "bg-slate-900/90 text-frontier-gold border-slate-700"
           }`}
         >
           {activeTrigger === "rejection" || latestEvent?.type === "hook_rejection"
@@ -262,19 +264,19 @@ export const SentryGateScene: React.FC<SentryGateSceneProps> = ({
         <div className="flex items-center gap-2">
           <button
             onClick={handleTestRejection}
-            className="text-[10px] font-mono font-black px-2.5 py-1 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-900 border-2 border-frontier-ink shadow-sm transition-transform active:translate-y-[1px] cursor-pointer"
+            className="text-[10px] font-mono font-bold px-3 py-1.5 rounded-lg bg-rose-950/80 hover:bg-rose-900 text-rose-300 border border-rose-700/80 shadow-sm transition-all active:translate-y-[1px] cursor-pointer min-h-[36px] flex items-center"
           >
             TEST REJECTION ⚠️
           </button>
           <button
             onClick={handleTestBuy}
-            className="text-[10px] font-mono font-black px-2.5 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border-2 border-frontier-ink shadow-sm transition-transform active:translate-y-[1px] cursor-pointer"
+            className="text-[10px] font-mono font-bold px-3 py-1.5 rounded-lg bg-emerald-950/80 hover:bg-emerald-900 text-emerald-300 border border-emerald-700/80 shadow-sm transition-all active:translate-y-[1px] cursor-pointer min-h-[36px] flex items-center"
           >
             TEST COURIER 📦
           </button>
         </div>
 
-        <div className="pointer-events-none text-[10px] font-mono font-bold text-slate-500 bg-white/90 px-2 py-0.5 rounded border border-frontier-ink shadow-sm">
+        <div className="pointer-events-none text-[10px] font-mono font-medium text-slate-400 bg-slate-900/90 px-2 py-1 rounded border border-slate-800 shadow-sm backdrop-blur-sm">
           Interactive Checkpoint • Drag to inspect
         </div>
       </div>

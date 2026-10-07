@@ -90,8 +90,8 @@ export const ChapterHistory: React.FC = () => {
         </div>
 
         {/* Quick Epoch Selector Pills */}
-        <div className="mt-6 flex flex-wrap items-center gap-2 font-mono text-xs">
-          <span className="text-slate-400 mr-1">Select Epoch:</span>
+        <div className="mt-6 flex items-center overflow-x-auto pb-1 sm:pb-0 gap-2 font-mono text-xs scrollbar-none -mx-1 px-1">
+          <span className="text-slate-400 mr-1 text-[11px] whitespace-nowrap hidden sm:inline">Select Epoch:</span>
           {[0, 1, 2, 3, 4].map((c) => {
             const isSelected = selectedChapter === c;
             const isCurrent = currentChapter === c;
@@ -101,7 +101,7 @@ export const ChapterHistory: React.FC = () => {
               <button
                 key={c}
                 onClick={() => setSelectedChapter(c)}
-                className={`px-3 py-1.5 rounded-lg border font-mono transition-all cursor-pointer ${
+                className={`px-3 py-2 rounded-lg border font-mono transition-all cursor-pointer whitespace-nowrap min-h-[42px] flex items-center justify-center gap-1.5 ${
                   isSelected
                     ? "bg-slate-800 border-frontier-gold text-frontier-gold shadow-sm"
                     : isCurrent
@@ -111,7 +111,8 @@ export const ChapterHistory: React.FC = () => {
                     : "bg-slate-950/40 border-slate-900 text-slate-600"
                 }`}
               >
-                Chapter {toRoman(c)}: {getChapterName(c)} {isCurrent ? "⚡" : isUnlocked ? "✓" : "🔒"}
+                <span>Ch {toRoman(c)}: {getChapterName(c)}</span>
+                <span className="text-xs">{isCurrent ? "⚡" : isUnlocked ? "✓" : "🔒"}</span>
               </button>
             );
           })}

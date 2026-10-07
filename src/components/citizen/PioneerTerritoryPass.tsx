@@ -121,8 +121,8 @@ export const PioneerTerritoryPass: React.FC = () => {
           </form>
 
           {/* Quick Preset Ranks */}
-          <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
-            <span className="text-slate-500">Inspect Archetypes:</span>
+          <div className="flex items-center overflow-x-auto pb-1 sm:pb-0 gap-2 font-mono text-xs scrollbar-none -mx-1 px-1">
+            <span className="text-slate-500 text-[11px] whitespace-nowrap hidden sm:inline">Archetypes:</span>
             {PRESET_WALLETS.map((preset) => (
               <button
                 key={preset.label}
@@ -130,7 +130,7 @@ export const PioneerTerritoryPass: React.FC = () => {
                   setAddressInput(preset.address);
                   fetchWallet(preset.address, preset.customPercent);
                 }}
-                className={`px-2.5 py-1 rounded border transition-colors ${
+                className={`px-3 py-2 rounded-lg border transition-colors whitespace-nowrap min-h-[40px] flex items-center justify-center cursor-pointer ${
                   addressInput === preset.address
                     ? "bg-slate-800 border-frontier-gold text-frontier-gold"
                     : "bg-slate-950/80 border-slate-800 text-slate-400 hover:text-slate-200"

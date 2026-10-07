@@ -11,10 +11,12 @@ interface CitizenPassCanvasProps {
 
 export const CitizenPassCanvas: React.FC<CitizenPassCanvasProps> = ({ archetype }) => {
   return (
-    <div className="w-full h-full min-h-[260px] relative">
+    <div className="w-full h-full min-h-[260px] relative touch-pan-y">
       <Canvas
         camera={{ position: [0, 0.45, 3.4], fov: 44 }}
-        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 1.8]}
+        performance={{ min: 0.5 }}
+        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       >
         <ambientLight intensity={0.65} />
         <directionalLight position={[4, 6, 4]} intensity={1.2} />

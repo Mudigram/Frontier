@@ -61,36 +61,38 @@ export const WorldScene: React.FC<WorldSceneProps> = ({
   onSelectTerritory,
 }) => {
   return (
-    <div className="w-full h-[450px] sm:h-[550px] rounded-2xl bg-gradient-to-b from-[#fef3c7]/60 via-[#fed7aa]/20 to-[#fdfaf3] relative overflow-hidden">
+    <div className="w-full h-[400px] sm:h-[520px] rounded-2xl bg-slate-950/90 border border-slate-800 relative overflow-hidden touch-pan-y">
       {/* 3D Canvas */}
       <Canvas
         camera={{ position: [0, 9, 13.5], fov: 42 }}
-        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 1.8]}
+        performance={{ min: 0.5 }}
+        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
         shadows
       >
-        <fog attach="fog" args={["#fef3c7", 16, 32]} />
+        <fog attach="fog" args={["#070a12", 16, 32]} />
 
-        {/* Neo-pop Daytime Lighting */}
-        <hemisphereLight args={["#fff7ed", "#65a30d", 0.9]} />
-        <ambientLight intensity={0.6} color="#fffbeb" />
+        {/* Atmospheric Dark Obsidian World Lighting */}
+        <hemisphereLight args={["#1e293b", "#090d16", 0.75]} />
+        <ambientLight intensity={0.45} color="#cbd5e1" />
         <directionalLight
           position={[8, 16, 8]}
-          intensity={2.2}
-          color="#fff7ed"
+          intensity={2.0}
+          color="#fef08a"
           castShadow
-          shadow-mapSize={[1024, 1024]}
+          shadow-mapSize={[512, 512]}
           shadow-camera-far={32}
           shadow-camera-left={-12}
           shadow-camera-right={12}
           shadow-camera-top={12}
           shadow-camera-bottom={-12}
         />
-        <directionalLight position={[-6, 4, -4]} intensity={0.45} color="#fb923c" />
+        <directionalLight position={[-6, 4, -4]} intensity={0.5} color="#38bdf8" />
 
-        {/* Distant Golden Sun Disc */}
+        {/* Distant Golden Celestial Horizon Glow */}
         <mesh position={[0, 4.5, -14]}>
           <circleGeometry args={[4.5, 32]} />
-          <meshBasicMaterial color="#fde047" transparent opacity={0.6} />
+          <meshBasicMaterial color="#d4a853" transparent opacity={0.22} />
         </mesh>
 
         {/* Orbit Controls with bounded angles */}
@@ -103,6 +105,10 @@ export const WorldScene: React.FC<WorldSceneProps> = ({
           autoRotate={false}
           dampingFactor={0.05}
           target={[0, 3.2, -0.5]}
+          touches={{
+            ONE: THREE.TOUCH.ROTATE,
+            TWO: THREE.TOUCH.DOLLY_PAN,
+          }}
         />
 
         {/* Territory Island Archipelago */}
@@ -120,9 +126,9 @@ export const WorldScene: React.FC<WorldSceneProps> = ({
       </Canvas>
 
       {/* Floating 3D Navigation Hint */}
-      <div className="absolute bottom-3 left-3 pointer-events-none text-[11px] font-mono font-bold text-frontier-ink bg-white/95 px-3 py-1.5 rounded-xl border-2 border-frontier-ink shadow-pop-sm backdrop-blur-sm flex items-center gap-2">
-        <span className="w-2 h-2 rounded-full bg-frontier-yellow animate-pulse border border-frontier-ink" />
-        <span>Click island to inspect • Drag to rotate camera</span>
+      <div className="absolute bottom-3 left-3 pointer-events-none text-[10px] sm:text-[11px] font-mono font-medium text-slate-300 bg-slate-900/90 px-3 py-1.5 rounded-xl border border-slate-700/80 shadow-lg backdrop-blur-sm flex items-center gap-2">
+        <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+        <span>Tap island to inspect • Drag to rotate camera</span>
       </div>
     </div>
   );
