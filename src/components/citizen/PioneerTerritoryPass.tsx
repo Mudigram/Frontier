@@ -36,6 +36,7 @@ const PRESET_WALLETS = [
 export const PioneerTerritoryPass: React.FC = () => {
   const { lookupWallet, chapter } = useFrontier();
   const [addressInput, setAddressInput] = useState<string>(PRESET_WALLETS[1].address);
+  const [activePreset, setActivePreset] = useState<string | null>(PRESET_WALLETS[1].address);
   const [walletData, setWalletData] = useState<WalletState | null>(null);
   const [customPercentOverride, setCustomPercentOverride] = useState<number>(0.843);
   const [isSearching, setIsSearching] = useState<boolean>(false);
@@ -100,14 +101,20 @@ export const PioneerTerritoryPass: React.FC = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              if (addressInput.trim()) fetchWallet(addressInput.trim());
+              if (addressInput.trim()) {
+                setActivePreset(null);
+                fetchWallet(addressInput.trim());
+              }
             }}
             className="flex flex-col sm:flex-row gap-3"
           >
             <input
               type="text"
               value={addressInput}
-              onChange={(e) => setAddressInput(e.target.value)}
+              onChange={(e) => {
+                setAddressInput(e.target.value);
+                if (activePreset) setActivePreset(null);
+              }}
               placeholder="Enter Solana wallet address to generate pass..."
               className="flex-1 px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm font-mono text-white placeholder-slate-500 focus:outline-none focus:border-frontier-gold/60 transition-colors"
             />
@@ -128,10 +135,11 @@ export const PioneerTerritoryPass: React.FC = () => {
                 key={preset.label}
                 onClick={() => {
                   setAddressInput(preset.address);
+                  setActivePreset(preset.address);
                   fetchWallet(preset.address, preset.customPercent);
                 }}
                 className={`px-3 py-2 rounded-lg border transition-colors whitespace-nowrap min-h-[40px] flex items-center justify-center cursor-pointer ${
-                  addressInput === preset.address
+                  activePreset === preset.address
                     ? "bg-slate-800 border-frontier-gold text-frontier-gold"
                     : "bg-slate-950/80 border-slate-800 text-slate-400 hover:text-slate-200"
                 }`}
@@ -190,9 +198,16 @@ export const PioneerTerritoryPass: React.FC = () => {
               {/* Metrics Grid */}
               <div className="grid grid-cols-2 gap-4 my-6 p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
                 <div>
-                  <div className="text-slate-500 text-[11px]">ESTIMATED HOLDING</div>
+                  <div className="text-slate-500 text-[11px]">
+                    {walletData?.balance.source === "observed" && !activePreset ? "CONFIRMED HOLDING" : "ESTIMATED HOLDING"}
+                  </div>
                   <div className="text-xl font-bold text-white mt-1">
-                    {formatNumber(effectivePercent * 10_000_000)} FRNT
+                    {formatNumber(
+                      walletData && !activePreset
+                        ? walletData.balance.value
+                        : effectivePercent * 10_000_000
+                    )}{" "}
+                    FRNT
                   </div>
                   <div className="text-slate-400 text-[10px] mt-0.5">Out of 1B Supply</div>
                 </div>

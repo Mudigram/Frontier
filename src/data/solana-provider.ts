@@ -255,11 +255,79 @@ export class SolanaFrontierProvider implements FrontierDataProvider {
   }
 
   async getWallet(address: string): Promise<WalletState> {
+    const chapter = await this.getChapter();
+    const activeMint = FRONTIER.mintAddress || this.report.mintAddress;
+    const rpcUrl =
+      process.env.NEXT_PUBLIC_SOLANA_RPC_URL ||
+      "https://api.mainnet-beta.solana.com";
+
+    // 1. Try querying live Solana RPC for real-time Token-2022 / SPL balance
+    try {
+      const response = await fetch(rpcUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          jsonrpc: "2.0",
+          id: "get-token-accounts-by-owner",
+          method: "getTokenAccountsByOwner",
+          params: [
+            address,
+            { mint: activeMint },
+            { encoding: "jsonParsed" },
+          ],
+        }),
+      });
+
+      if (response.ok) {
+        const json = await response.json();
+        if (json?.result?.value && Array.isArray(json.result.value)) {
+          let totalBalance = 0;
+          for (const item of json.result.value) {
+            const parsedInfo = item?.account?.data?.parsed?.info;
+            if (parsedInfo?.tokenAmount?.uiAmount !== undefined) {
+              totalBalance += Number(parsedInfo.tokenAmount.uiAmount);
+            }
+          }
+
+          const supply = FRONTIER.supply; // 1,000,000,000 FRNT
+          const supplyPercent = (totalBalance / supply) * 100;
+
+          return {
+            address,
+            balance: {
+              value: totalBalance,
+              source: "observed",
+              note: `Live query from Solana mainnet: ${json.result.value.length} token account(s)`,
+            },
+            supplyPercent: {
+              value: supplyPercent,
+              source: "observed",
+            },
+            currentChapter: {
+              value: chapter.chapter,
+              source: "derived",
+            },
+            walletCapPercent: {
+              value: chapter.currentWalletCapPercent,
+              source: "derived",
+              note: "Derived from volume threshold model",
+            },
+            withinLimit: {
+              value: supplyPercent <= chapter.currentWalletCapPercent,
+              source: "derived",
+            },
+          };
+        }
+      }
+    } catch (err) {
+      console.warn("Live Solana RPC wallet lookup failed, falling back to snapshot:", err);
+    }
+
+    // 2. Fallback to snapshot report if RPC query failed or address was in sample
     const sample = this.report.wallets.sampledWallets.find(
       (w) => w.wallet.toLowerCase() === address.toLowerCase()
     );
 
-    const chapter = await this.getChapter();
     const balance = sample ? sample.balanceFormatted : 0;
     const supplyPercent = sample ? sample.percentageOfSupply : 0;
 
