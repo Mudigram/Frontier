@@ -7,6 +7,14 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500 font-mono">
         <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
           <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md border border-frontier-gold/50 bg-slate-900 overflow-hidden flex items-center justify-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo.png"
+                alt="Frontier Crest"
+                className="w-full h-full object-cover scale-110"
+              />
+            </div>
             <span className="font-bold tracking-tight text-white font-mono text-sm">
               {FRONTIER.name}
             </span>

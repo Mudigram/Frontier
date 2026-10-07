@@ -57,6 +57,14 @@ export const metadata: Metadata = {
       "On-chain observability and 3D visual world for Token-2022 token Frontier ($FRNT). The world expands by Chapter.",
     creator: "@FrontierWars",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/logo.png",
+    shortcut: "/favicon.png",
+  },
   robots: {
     index: true,
     follow: true,

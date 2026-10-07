@@ -12,18 +12,13 @@ export const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 py-2 flex items-center justify-between">
         {/* Brand */}
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl border border-frontier-gold/60 bg-slate-900 flex items-center justify-center shadow-sm">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#d4a853"
-              className="w-5 h-5"
-              strokeWidth="2"
-            >
-              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" />
-              <polyline points="12 22 12 15.5" />
-              <polyline points="22 8.5 12 15.5 2 8.5" />
-            </svg>
+          <div className="w-10 h-10 rounded-xl border border-frontier-gold/60 bg-slate-900 overflow-hidden flex items-center justify-center shadow-md shadow-amber-950/20">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt="Frontier Citadel Crest"
+              className="w-full h-full object-cover scale-110"
+            />
           </div>
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
