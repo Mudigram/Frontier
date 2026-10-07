@@ -8,6 +8,22 @@ export const FRONTIER = {
   symbol: "FRNT",
   decimals: 6,
   supply: 1_000_000_000,
+  /**
+   * Token Contract Address (Mint).
+   * Can be configured via NEXT_PUBLIC_FRONTIER_MINT environment variable
+   * or replaced here once live on pump.fun.
+   */
+  mintAddress: process.env.NEXT_PUBLIC_FRONTIER_MINT || "GLScwap5hj8WC6zicbLv1udMdK5jPdzDBAkVNRuJrm8c",
+  domain: "https://www.playfrontier.xyz",
+  xHandle: "https://x.com/PlayFRNTonSol",
+  pumpFunUrl: (mint?: string) => {
+    const ca = mint || process.env.NEXT_PUBLIC_FRONTIER_MINT || "GLScwap5hj8WC6zicbLv1udMdK5jPdzDBAkVNRuJrm8c";
+    return ca ? `https://pump.fun/${ca}` : "https://pump.fun";
+  },
+  dexScreenerUrl: (mint?: string) => {
+    const ca = mint || process.env.NEXT_PUBLIC_FRONTIER_MINT || "GLScwap5hj8WC6zicbLv1udMdK5jPdzDBAkVNRuJrm8c";
+    return ca ? `https://dexscreener.com/solana/${ca}` : "https://dexscreener.com/solana";
+  },
 } as const;
 
 /** Token-2022 program address */

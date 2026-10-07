@@ -24,6 +24,7 @@ import type {
 import type { ChapterState } from "@/chapter/types";
 import { CHAPTER_CONFIG } from "@/chapter/config";
 import { buildChapterState } from "@/chapter/engine";
+import { FRONTIER } from "@/lib/constants";
 import observedReportData from "./reports/observed-report.json";
 
 // Raw types reflecting the Hooked Observer JSON contract
@@ -157,13 +158,14 @@ export class SolanaFrontierProvider implements FrontierDataProvider {
 
   async getToken(): Promise<TokenState> {
     const t = this.report.token;
+    const activeMint = FRONTIER.mintAddress || t.mint.value;
     return {
-      mint: t.mint.value,
-      name: t.metadata?.value?.name ?? "Frontier",
-      symbol: t.metadata?.value?.symbol ?? "FRNT",
+      mint: activeMint,
+      name: FRONTIER.name,
+      symbol: FRONTIER.symbol,
       decimals: t.decimals.value,
-      supply: 1_000_000_000, // Standardized 1B supply from supplyFormatted
-      imageUri: t.metadata?.value?.image,
+      supply: FRONTIER.supply, // Standardized 1B supply from supplyFormatted
+      imageUri: t.metadata?.value?.image ?? "/logo.png",
       tokenProgram: t.tokenProgram.value,
       isToken2022: t.isToken2022,
       extensions: t.extensions.value,

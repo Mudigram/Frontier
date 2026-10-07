@@ -30,10 +30,39 @@ export const Footer: React.FC = () => {
           </span>
         </div>
 
-        <div className="flex items-center gap-4">
-          <span className="px-3 py-1 rounded-lg text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300 flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="https://x.com/PlayFRNTonSol"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300 hover:text-frontier-gold hover:border-slate-700 transition-colors flex items-center gap-1.5"
+          >
+            <span>X: @PlayFRNTonSol</span>
+          </a>
+
+          <a
+            href={process.env.NEXT_PUBLIC_FRONTIER_MINT ? `https://pump.fun/${process.env.NEXT_PUBLIC_FRONTIER_MINT}` : "https://pump.fun"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-amber-950/40 border border-amber-600/40 text-amber-300 hover:bg-amber-950/70 transition-colors flex items-center gap-1"
+          >
+            <span>Pump.fun</span>
+            <span>⚡</span>
+          </a>
+
+          <a
+            href={process.env.NEXT_PUBLIC_FRONTIER_MINT ? `https://dexscreener.com/solana/${process.env.NEXT_PUBLIC_FRONTIER_MINT}` : "https://dexscreener.com/solana"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-300 hover:border-emerald-700/60 transition-colors flex items-center gap-1"
+          >
+            <span>DexScreener</span>
+            <span className="text-emerald-400">📈</span>
+          </a>
+
+          <span className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-400 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span>SOLANA ON-CHAIN OBSERVABILITY</span>
+            <span>SOLANA TOKEN-2022</span>
           </span>
         </div>
       </div>

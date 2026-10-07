@@ -57,28 +57,61 @@ export const Header: React.FC = () => {
           </a>
         </nav>
 
-        {/* Status Indicators & Mode Switcher */}
-        <div className="flex items-center gap-3">
-          <div className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <span>Token-2022</span>
-          </div>
+        {/* Status Indicators, Socials & Buy CTA */}
+        <div className="flex items-center gap-2.5">
+          {/* X (Twitter) Link */}
+          <a
+            href="https://x.com/PlayFRNTonSol"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-frontier-gold hover:border-slate-700 flex items-center justify-center transition-colors"
+            title="Follow @PlayFRNTonSol on X"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
 
+          {/* DexScreener Chart Link */}
+          <a
+            href={process.env.NEXT_PUBLIC_FRONTIER_MINT ? `https://dexscreener.com/solana/${process.env.NEXT_PUBLIC_FRONTIER_MINT}` : "https://dexscreener.com/solana"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-300 hover:border-emerald-700/60 transition-colors"
+            title="View Live Price & Market Cap Chart"
+          >
+            <span className="text-emerald-400">📈</span>
+            <span className="hidden md:inline">Chart</span>
+          </a>
+
+          {/* Direct Buy Button (Pump.fun) */}
+          <a
+            href={process.env.NEXT_PUBLIC_FRONTIER_MINT ? `https://pump.fun/${process.env.NEXT_PUBLIC_FRONTIER_MINT}` : "https://pump.fun"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-frontier-gold/90 hover:bg-frontier-gold text-slate-950 transition-all shadow-sm active:translate-y-[1px]"
+            title="Buy $FRNT on Pump.fun"
+          >
+            <span>BUY $FRNT</span>
+            <span className="text-xs">⚡</span>
+          </a>
+
+          {/* Simulation vs On-Chain Mode Switcher */}
           <button
             onClick={() => setProviderMode(isSimulationMode ? "observed" : "simulation")}
-            className={`text-[11px] font-mono font-semibold px-3 py-1.5 rounded-lg border transition-all flex items-center gap-2 cursor-pointer ${
+            className={`hidden md:inline-flex text-[11px] font-mono font-semibold px-2.5 py-1.5 rounded-lg border transition-all items-center gap-1.5 cursor-pointer ${
               isSimulationMode
                 ? "bg-rose-950/80 text-rose-300 border-rose-700/80 hover:bg-rose-900"
                 : "bg-emerald-950/80 text-emerald-300 border-emerald-700/80 hover:bg-emerald-900"
             }`}
-            title="Click to switch between Simulation Mode and Real On-Chain Observed Data"
+            title="Switch between Simulation Mode and Real On-Chain Observed Data"
           >
             <span
-              className={`w-2 h-2 rounded-full ${
+              className={`w-1.5 h-1.5 rounded-full ${
                 isSimulationMode ? "bg-rose-400 animate-pulse" : "bg-emerald-400"
               }`}
             />
-            <span>{isSimulationMode ? "SIMULATION" : "ON-CHAIN"}</span>
+            <span>{isSimulationMode ? "SIM" : "ON-CHAIN"}</span>
           </button>
         </div>
       </div>

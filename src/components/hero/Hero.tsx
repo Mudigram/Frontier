@@ -40,14 +40,54 @@ export const Hero: React.FC = () => {
         {/* Left Column: Headlines, Architecture Identity, Live Progress */}
         <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left z-10">
           
-          {/* Subtle Protocol Pill */}
-          <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-mono">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-slate-300 font-semibold tracking-wide">
-              TOKEN-2022 TRANSFER HOOK OBSERVABILITY
-            </span>
-            <span className="text-slate-500 font-bold">|</span>
-            <span className="text-frontier-gold font-bold">FRNT</span>
+          {/* Protocol Pill + Live Market Action */}
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-mono">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-slate-300 font-semibold tracking-wide">
+                TOKEN-2022 TRANSFER HOOK
+              </span>
+              <span className="text-slate-500 font-bold">|</span>
+              <span className="text-frontier-gold font-bold">$FRNT</span>
+            </div>
+
+            {/* Quick Pump.fun Buy Badge */}
+            <a
+              href={process.env.NEXT_PUBLIC_FRONTIER_MINT ? `https://pump.fun/${process.env.NEXT_PUBLIC_FRONTIER_MINT}` : "https://pump.fun"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-frontier-gold/50 text-xs font-mono font-bold text-frontier-gold hover:bg-amber-500/25 transition-all shadow-sm"
+              title="Trade $FRNT on Pump.fun"
+            >
+              <span>BUY ON PUMP.FUN</span>
+              <span className="text-xs">⚡</span>
+            </a>
+
+            {/* DexScreener Link */}
+            <a
+              href={`https://dexscreener.com/solana/${process.env.NEXT_PUBLIC_FRONTIER_MINT || "GLScwap5hj8WC6zicbLv1udMdK5jPdzDBAkVNRuJrm8c"}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300 hover:text-emerald-300 hover:border-emerald-700/60 transition-colors"
+              title="Live Price Chart & Market Cap on DexScreener"
+            >
+              <span className="text-emerald-400">📈</span>
+              <span>CHART</span>
+            </a>
+
+            {/* 1-Click Copy Contract Address Pill */}
+            <button
+              onClick={() => {
+                const ca = "GLScwap5hj8WC6zicbLv1udMdK5jPdzDBAkVNRuJrm8c";
+                navigator.clipboard.writeText(ca);
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-mono text-slate-300 hover:border-frontier-gold/60 hover:text-white transition-all cursor-pointer active:scale-95"
+              title="Click to copy Contract Address"
+            >
+              <span className="text-frontier-gold">CA:</span>
+              <span className="font-bold">GLScwap...rm8c</span>
+              <span className="text-[10px] text-slate-400">📋</span>
+            </button>
           </div>
 
           {/* Wordmark & Main Headline */}
@@ -127,17 +167,26 @@ export const Hero: React.FC = () => {
 
           {/* Tactical Action Buttons Group */}
           <div className="mt-6 flex flex-wrap items-center gap-3 w-full sm:w-auto">
-            <a href="#world-map" className="btn-gold !text-xs !py-3 !px-5 min-h-[44px] flex items-center justify-center gap-2 flex-1 sm:flex-initial">
+            <a
+              href={process.env.NEXT_PUBLIC_FRONTIER_MINT ? `https://pump.fun/${process.env.NEXT_PUBLIC_FRONTIER_MINT}` : "https://pump.fun"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold !text-xs !py-3 !px-5 min-h-[44px] flex items-center justify-center gap-2 flex-1 sm:flex-initial shadow-lg shadow-amber-950/30"
+            >
+              <span>BUY $FRNT (PUMP.FUN)</span>
+              <span>⚡</span>
+            </a>
+            <a href="#world-map" className="btn-tactical !text-xs !py-3 !px-5 min-h-[44px] flex items-center justify-center gap-2 flex-1 sm:flex-initial">
               <span>EXPLORE 3D ARCHIPELAGO</span>
               <span>🧭</span>
             </a>
             <a href="#pioneer-pass" className="btn-tactical !text-xs !py-3 !px-5 min-h-[44px] flex items-center justify-center gap-2 flex-1 sm:flex-initial">
-              <span>PIONEER TERRITORY PASS</span>
+              <span>PIONEER PASS</span>
               <span>🪪</span>
             </a>
             <a href="#observatory" className="btn-tactical !text-xs !py-3 !px-4 min-h-[44px] flex items-center justify-center gap-2 w-full sm:w-auto">
               <span>HOOK RADAR</span>
-              <span>⚡</span>
+              <span>🛡️</span>
             </a>
           </div>
         </div>

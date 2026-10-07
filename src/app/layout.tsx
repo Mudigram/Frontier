@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://frontier.wars";
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://www.playfrontier.xyz";
 
 export const viewport: Viewport = {
   themeColor: "#070a12",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Frontier (FRNT) — Chapter Wars",
     description:
       "On-chain observability and 3D visual world for Token-2022 token Frontier ($FRNT). The world expands by Chapter.",
-    creator: "@FrontierWars",
+    creator: "@PlayFRNTonSol",
   },
   icons: {
     icon: [
