@@ -1,10 +1,73 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://frontier.wars";
+
+export const viewport: Viewport = {
+  themeColor: "#070a12",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
-  title: "Frontier — Chapter Wars",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Frontier (FRNT) — Chapter Wars",
+    template: "%s | Frontier Chapter Wars",
+  },
   description:
-    "An on-chain observability and visual world built around the Frontier (FRNT) token. The world expands by Chapter.",
+    "An on-chain observability and low-poly 3D visual world built around the Solana Token-2022 token Frontier ($FRNT). The world expands by Chapter as on-chain volume unlocks fresh territory.",
+  applicationName: "Frontier Chapter Wars",
+  keywords: [
+    "Frontier",
+    "FRNT",
+    "Chapter Wars",
+    "Solana",
+    "Token-2022",
+    "Transfer Hook",
+    "On-chain Observability",
+    "Meteora",
+    "DeFi",
+    "3D World",
+    "Low-Poly",
+    "Web3",
+  ],
+  authors: [{ name: "Frontier Protocol", url: siteUrl }],
+  creator: "Frontier Protocol",
+  publisher: "Frontier Protocol",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "Frontier (FRNT) — Chapter Wars",
+    description:
+      "On-chain observability and 3D visual world for Token-2022 token Frontier ($FRNT). The world expands by Chapter.",
+    url: siteUrl,
+    siteName: "Frontier Chapter Wars",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frontier (FRNT) — Chapter Wars",
+    description:
+      "On-chain observability and 3D visual world for Token-2022 token Frontier ($FRNT). The world expands by Chapter.",
+    creator: "@FrontierWars",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -13,8 +76,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="light">
-      <body className="min-h-screen bg-frontier-bg text-frontier-ink">
+    <html lang="en" className="dark scroll-smooth">
+      <body className="min-h-screen bg-frontier-bg text-frontier-text-primary antialiased">
         {children}
       </body>
     </html>
